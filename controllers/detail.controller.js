@@ -49,7 +49,7 @@ exports.pay = async (req, res) => {
       installments: 6,
       default_installments: 6
     },
-    // notification_url: `${api}hook`,
+    notification_url: `${api}hook`,
     auto_return: 'approved',
     back_urls: {
       success: `${api}success`,
