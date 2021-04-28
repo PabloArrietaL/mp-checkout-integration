@@ -1,0 +1,60 @@
+<script src="https://www.mercadopago.com/v2/security.js" view="success"></script>
+
+<style type="text/css">
+  .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+  }
+
+  .table {
+    width: 40%;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+  }
+
+  table {
+    margin: 20px 10px 10px 15px;
+    width: 80%;
+  }
+
+  th {
+    text-align-last: center;
+    background-color: rgb(108, 236, 108);
+  }
+
+  .action {
+    text-align-last: center;
+  }
+</style>
+
+<div class="content">
+  <div class="table">
+    <table>
+      <tr style="height: 3rem;">
+        <th colspan="2">Pago exitoso</th>
+      </tr>
+      <tr>
+        <td>Método de pago</td>
+        <td>{{payment_type}}</td>
+      </tr>
+      <tr>
+        <td>External reference</td>
+        <td>{{external_reference}}</td>
+      </tr>
+      <tr>
+        <td>ID de pago</td>
+        <td>{{collection_id}}</td>
+      </tr>
+      <tr class="action">
+        <td colspan="2">
+          <form action="/" method="get">
+            <button type="submit" class="mercadopago-button" formmethod="get">Inicio</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</div>
