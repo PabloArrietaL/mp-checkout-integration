@@ -12,6 +12,5 @@ module.exports = () => {
     router.get('/success', responseController.success);
     router.get('/failure', responseController.failure);
     router.get('/pending', responseController.pending);
-    router.post('/hook', responseController.hook);
     return router;
 }

@@ -21,4 +21,18 @@ app.use('/assets', express.static(__dirname + '/assets'));
 
 app.use('/', routes());
 
+app.post('/hook', (req, res) => {
+    if (req.method === 'POST') {
+        let body = '';
+        req.on('data', (chunk) => {
+            body += chunk.toString();
+        });
+        req.on('end', () => {
+            console.log(body, 'webhook response');
+            res.end('ok');
+        });
+    }
+    return res.status(200);
+});
+
 app.listen(port);
